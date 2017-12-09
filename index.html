@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>通过Modernizr检测HTML5特性</title>
+    </head>
+    <body>
+        <article>
+            <h1>通过Modernizr检测HTML5特性</h1>
+        </article>
+        <div id="result-stub">
+            <span id="msg" style="color:red;"></span>
+            <hr>
+            <span id="msg1" style="color:red;"></span>
+        </div>
+
+        <script >
+            window.onload = function() {
+                     //通过Modernizr.对浏览器canvas功能进行检测
+                    if (Modernizr.canvas) {
+                            $('#msg').text('本浏览器支持Canvas API');
+                    }else{
+                             $('#msg').text('本浏览器不支持Canvas API');
+                    }
+
+                    var a = document.createElement('a');
+if (typeof a.download != "undefined") {
+    $('#msg1').text('本浏览器支持下载');
+} else {
+  $('#msg1').text('本浏览器不支持下载');
+}
+            }
+
+
+        </script>
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.js"></script>
+    </body>
+</html>
+
