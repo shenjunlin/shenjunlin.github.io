@@ -12,29 +12,24 @@
             <span id="msg" style="color:red;"></span>
             <hr>
             <span id="msg1" style="color:red;"></span>
+            <button onclick="down" id="down">下载</button>
         </div>
-
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+        <script src="modernizr-custom.js"></script>
         <script >
             window.onload = function() {
-                     //通过Modernizr.对浏览器canvas功能进行检测
-                    if (Modernizr.canvas) {
-                            $('#msg').text('本浏览器支持Canvas API');
-                    }else{
-                             $('#msg').text('本浏览器不支持Canvas API');
-                    }
-
                     if (Modernizr.adownload) {
                             $('#msg1').text('本浏览器支持下载');
                     }else{
                              $('#msg1').text('本浏览器不支持下载');
                     }
-
-
-}
-
+        }
         </script>
-        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-        <!-- <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.js"></script> -->
-        <script src="modernizr-custom.js"></script>
+        <script>
+          $('#down').click(function(){
+            window.location="http://wxz.myapp.com/16891/14A9C51E624EC1DBBFFD5B93F2B02396.apk";
+          });
+        </script>
+
     </body>
 </html>
